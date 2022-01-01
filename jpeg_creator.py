@@ -108,30 +108,8 @@ def place_icons(board, instruction, b_height = BLOCK_DIM, b_width = BLOCK_DIM, s
     return board
     
 
-board = generate_board()
-cv2.imshow("board", board)
-
-sample_input  =  [[0 for col in range(N_BLOCKS)] for row in range(N_BLOCKS)]
-sample_input[0][1] = 1
-sample_input[0][2] = 2
-sample_input[0][3] = 3
-sample_input[0][4] = 4
-sample_input[0][5] = 5
-sample_input[0][6] = 6
-sample_input[-1][1] = -1
-sample_input[-1][2] = -2
-sample_input[-1][3] = -3
-sample_input[-1][4] = -4
-sample_input[-1][5] = -5
-sample_input[-1][6] = -6
-
-board = place_icons(board, sample_input)
 
 
-
-cv2.imshow("Board", board)
-cv2.waitKey()
-cv2.destroyAllWindows()
 
 
 

@@ -7,7 +7,7 @@ PIECE_MAP = {
     6: "king"
 }
 N_BLOCKS = 8
-BLOCK_DIM = 75
+BLOCK_DIM = 512
 
 DARK_BROWN = (99, 136, 181)
 LIGHT_BROWN = (181, 217, 240)
