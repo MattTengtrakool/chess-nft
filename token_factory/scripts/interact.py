@@ -1,9 +1,10 @@
 from dotenv.main import dotenv_values
 from brownie import Chess_Byte, accounts
 # from brownie.network import priority_fee
-from eth_account.messages import encode_defunct
+from eth_account.messages import encode_intended_validator, encode_defunct
 from web3 import Web3
 from web3.auto import w3
+from eth_abi import encode_single, encode_abi
 
 
 
@@ -13,9 +14,11 @@ def to_32byte_hex(val):
    return Web3.toHex(Web3.toBytes(val).rjust(32, b'\0'))
 
 
-def hsign (msg, sk):
+def hsign (params, values, validator, sk):
     # Web3.solidityKeccak(types, params).hex()
-    msg = encode_defunct(text=msg)
+    # msg = encode_intended_validator(validator, text=msg)
+    msg = encode_defunct(primitive=Web3.solidityKeccak(params,values))
+    print(msg)
     signed_message = w3.eth.account.sign_message(msg, private_key=sk)
     ec_recover_args = (msghash, v, r, s) = (
       Web3.toHex(signed_message.messageHash),
@@ -60,15 +63,17 @@ def main():
     """
     Buyer = accounts[0]
 
-    msghash, v, r, s = hsign(str(token_id) + tokenURI + Buyer.address + Contract.address, deployer.private_key)
-    print("Buyer balance before transacting ", Buyer.balance())
-    tx = Chess_Byte[0].buy_token(tokenURI,msghash, v, r, s, token_id, Contract.address,{'from':accounts[0], 'value': Chess_Byte[0].cprice()})
-    print("Buyer balance after", Buyer.balance())
+    # msghash, v, r, s = hsign(str(token_id) + tokenURI + Buyer.address + Contract.address, deployer.address, deployer.private_key)
+    # Buyer address is to make sure on buyer won't buy using other people's hash
+    msghash, v, r, s = hsign(['uint256', 'string', 'address', 'address'],[token_id, tokenURI, Buyer.address, Contract.address], deployer.address, deployer.private_key)
+    # print("Buyer balance before transacting ", Buyer.balance())
+    tx = Chess_Byte[0].buy_token(token_id,tokenURI,msghash, v, r, s,{'from':accounts[0], 'value': Chess_Byte[0].cprice()})
+    # print("Buyer balance after", Buyer.balance())
     Chess_Byte[0].withdraw({'from':deployer})
-    print("Deployer balance after withdrawing", deployer.balance())
+    # print("Deployer balance after withdrawing", deployer.balance())
     # print(tx.info, tx.events)
-    print("Token id", Chess_Byte[0].token_size({'from':deployer}))
-    
+    # print("Token id", Chess_Byte[0].token_size({'from':deployer}))
+    print(tx.events)
 
 
 
