@@ -90,4 +90,26 @@ function transValue() {
     }
   }
   console.log(arr);
+  var boardout = document.getElementById("boardoutput");
+  var boardoutval = boardout.value;
+  console.log(boardoutval);
+  document.getElementById("boardoutput").value = arr;
+  document.getElementById("confirmation").submit();
+  //postData(arr);
 }
+
+/*function postData(inarr) {
+  $.ajax({
+      type: "POST",
+      url: "/result",
+      contentType: "application/json",
+      data: JSON.stringify(inarr),
+      dataType: "json",
+      success: function (response) {
+          console.log(response);
+      },
+      error: function (err) {
+          console.log(err);
+      }
+  })
+}*/
