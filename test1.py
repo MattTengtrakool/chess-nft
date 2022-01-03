@@ -1,6 +1,6 @@
 from jpeg_creator import *
 
-board = generate_board()
+# board = generate_board()
 
 sample_input  =  [[0 for col in range(N_BLOCKS)] for row in range(N_BLOCKS)]
 sample_input[0][0] = 4
@@ -37,6 +37,5 @@ sample_input[-7][5] = -1
 sample_input[-8][6] = -1
 sample_input[-2][7] = -1
 
-board = place_icons(board, sample_input)
-
-cv2.imwrite("generated_img.png",board)
+# board = place_icons(board, sample_input)
+# cv2.imwrite("generated_img.png",board)
