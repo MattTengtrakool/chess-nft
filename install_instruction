@@ -1,0 +1,15 @@
+create an environemnt with
+python3 -m venv venv
+activae the virtual environent with
+source ./venv/bin/activate
+install dependancies
+pyrbase==3.0.27
+tinify==1.5.2
+opencv-python==4.5.5.62
+
+to install the rest etherium related dependancy install brownie the follwowing way
+pipx==0.17.0
+web3==5.25.0
+python3 -m pipx ensurepath
+then install eth-brownie eth-brownie==1.17.2
+The rest of the dependacny will be installed by itself
