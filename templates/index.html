@@ -2,17 +2,15 @@
 <html lang="en">
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="assets/js/jquery-ui.min.css">
-    <script src="assets/js/external/jquery/jquery.js"></script>
-    <script src="assets/js/jquery-ui.min.js"></script> 
-    <script src="assets/js/main.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="static/js/jquery-ui.min.css">
+    <script src="static/js/external/jquery/jquery.js"></script>
+    <script src="static/js/jquery-ui.min.js"></script> 
+    <script src="static/js/main.js" async></script>
+    <link rel="stylesheet" type="text/css" href="static/css/main.css"/>
     <title>tester</title>
 </head>
 
 <body>
-    
-
     <div class="item1">Chess NFT</div>
     <div class="item2" style="width:100px;">
         <div class="drag_items">
@@ -347,6 +345,9 @@
         </div>
     </div>
     <div class = "item5">
+        <form id = "confirmation" action = "/confirmation" method = "POST">
+            <input id = "boardoutput" name = "boardoutput" type = "hidden" value = "10"/>
+        </form>
         <button class="submit" onClick="refreshPage()">Refresh</button>
         <script>
         function refreshPage(){
