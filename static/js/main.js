@@ -113,3 +113,64 @@ function transValue() {
       }
   })
 }*/
+// dropdown menu
+const menuButton = document.querySelector('.fa-bars')
+const menu = document.querySelector('.dropdown')
+const menuLink = document.querySelectorAll('.dropLink')
+
+menuButton.addEventListener('click', function () {
+  menuButton.classList.toggle('fa-times');
+  menu.classList.toggle('is-active');
+})
+
+menuLink.forEach(function(element) {
+  console.log('test')
+  element.addEventListener('click', goAway);
+})
+
+function goAway() {
+  menu.classList.toggle('is-active')
+  menuButton.classList.toggle('fa-times');
+}
+
+// countdown 
+const countdown = () => {
+  const countDate = new Date('Oct 26, 2021 13:00:00').getTime();
+  const now = new Date().getTime();
+  const gap = countDate - now;
+
+  const second = 1000;
+  const minute = second * 60;
+  const hour = minute * 60;
+  const day = hour * 24;
+
+  const textDay = Math.floor(gap / day);
+  const textHour = Math.floor((gap % day) / hour);
+  const textMinute = Math.floor((gap % hour) / minute);
+  const textSecond = Math.floor((gap % minute) / second);
+  
+  document.querySelector(".day").innerText = textDay;
+  document.querySelector(".hour").innerText = textHour;
+  document.querySelector(".minute").innerText = textMinute;
+  document.querySelector(".second").innerText = textSecond;
+
+  if (gap < 100) {
+    const textSecond = 0;
+    const textMinute = 0;
+    const textHour = 0;
+    const textDay = 0;
+
+    document.querySelector(".day").innerText = textDay;
+    document.querySelector(".hour").innerText = textHour;
+    document.querySelector(".minute").innerText = textMinute;
+    document.querySelector(".second").innerText = textSecond;
+  }
+}
+
+// setInterval(countdown, 1000);
+
+
+// smooth scroll
+$(function() {
+  $('a').smoothScroll();
+});
