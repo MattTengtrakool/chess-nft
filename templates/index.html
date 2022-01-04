@@ -1,393 +1,735 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="static/js/jquery-ui.min.css">
-    <script src="static/js/external/jquery/jquery.js"></script>
-    <script src="static/js/jquery-ui.min.js"></script> 
-    <script src="static/js/main.js" async></script>
-    <link rel="stylesheet" type="text/css" href="static/css/main.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!--SHORTCUT ICON-->
-    <link rel="shortcut icon" href="images/logo.png">
-
-    <!--META TAGS-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-    <!--FONT AWESOME-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;800;900&family=Source+Sans+3:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
-    <title>ChessBytes</title>
+     
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChessBytes</title>
+  
+  <link rel="stylesheet" type="text/css" href="static/css/main.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6ab5aa6dad.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@800&family=Krona+One&display=swap" rel="stylesheet"> 
+  <link type="image/png" href="./FFLogo2.png" rel="icon">
 </head>
-<div class="content">
-    <img src="images/logo.png" class="logo" alt="LOGO.">
-    <h1>NFT<br> AROUND THE WORLD</h1>
-    <h2>An awesome website is under construction, stay tuned.</h2>
-    <div class="arrow bounce">
-    <a class="fa fa-arrow-down" href="#"></a>
-    </div>
-    <section class="button">
-    <div class="searchBox">
-    <input class="searchInput"type="email" name="" placeholder="Email address*" required="">
-    <button class="searchButton" href="#">Notify Me</button>
-    </div>
-    </section>
-    <section class="social_icons">
-    <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-    <a href="#" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
-    <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-    <a href="#" title="Telegram" target="_blank"><i class="fa fa-telegram"></i></a>
-    </section>
-</div>
 <body>
-    <div class="item1">
-        
+  <header>
+    <section id="home">
+      <div class="navDiv">
+        <nav class="wrapper navContentDiv">
+          <div class="navLogoDiv">
+            <a href="#">
+              <img src="../static/images/chessbyteslogo.png" alt="ChessBytes logo" class="logo">
+            </a>
+          <div>
+          </div>
+            <a  aria-label="ChessBytes Twitter" href="https://twitter.com/ChessBytes" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+            <a  aria-label="ChessBytes Discord" href="https://discord.gg/ChessBytes" target="_blank" rel="noopener"><i class="fab fa-discord"></i></a>
+            <a  aria-label="ChessBytes Instagram" href="https://www.instagram.com/ChessBytes/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="navSecondDiv">
+            <div class="navButtonDiv">
+              <button class="connectWalletButton">CONNECT WALLET</button>
+            </div>
+            <i class="fas fa-bars"></i>
+            <ul class="dropdown">
+              <li><a class="dropLink a" href="#home">HOME</a></li>
+              <li><a class="dropLink a" href="#about">ABOUT</a></li>
+              <li><a class="dropLink a" href="#foodFeatures">SPECIALTIES</a></li>
+              <li><a class="dropLink a" href="#roadmap">ROADMAP</a></li>
+              <li><a class="dropLink a" href="#team">TEAM</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="navBugDiv">
 
-    </div>
-    <div class="item2" style="width:100px;">
+      </div>
+    
+        <a class="backToTop" href="#home">
+          <i class="fas fa-chevron-up"></i>
+        </a>
+
+      <section data-aos="fade-down" class="headerText wrapper">
+        <h1>
+          <span class="headerfood">CHESS</span>
+          <span class="headerfrogs">BYTES</span>
+        </h1>
+        <h3><span>UNIQUE</span> CHESS GAMES AND BOARDS MINTING ON THE WORLD'S 1ST CUSTOMIZABLE NFT CHESS MARKETPLACE</h3>
+      </section>
+    </section>
+    <section class="headerImgDiv">
+        <div class="item1">
+        
+        </div>
+        <div class="item2" style="width:100px;">
+            <div class="drag_items">
+                <div class="empty">
+                    <div class="fill wrook" draggable="true"> </div>
+                </div>
+    
+                <div class="empty" >
+                    <div class="fill wpawn" draggable="true"> </div>
+                </div>
+    
+                <div class="empty" >
+                    <div class="fill wknight" draggable="true"> </div>
+                </div>
+    
+                <div class="empty">
+                    <div class="fill wpawn" draggable="true"> </div>
+                </div>
+    
+                <div class="empty">
+                    <div class="fill wbishop" draggable="true"> </div>
+                </div>
+    
+                <div class="empty">
+                    <div class="fill wpawn" draggable="true"> </div>
+                </div>
+    
+                <div class="empty">
+                    <div class="fill wking" draggable="true"> </div>
+                </div>
+    
+                <div class="empty">
+                    <div class="fill wpawn" draggable="true"> </div>
+                </div>
+    
+                <div class="empty" >
+                    <div class="fill wqueen" draggable="true"> </div>
+                </div>
+    
+                <div class="empty" >
+                    <div class="fill wpawn" draggable="true"> </div>
+                </div>
+    
+                <div class="empty" >
+                    <div class="fill wbishop" draggable="true"> </div>
+                </div>
+    
+                <div class="empty">
+                    <div class="fill wpawn" draggable="true"> </div>
+                </div>
+    
+                <div class="empty" >
+                    <div class="fill wknight" draggable="true"> </div>
+                </div>
+    
+                <div class="empty" >
+                    <div class="fill wpawn" draggable="true" > </div>
+                </div>
+    
+                <div class="empty" >
+                    <div class="fill wrook" draggable="true" > </div>
+                </div>
+                
+                <div class="empty" >
+                    <div class="fill wpawn" draggable="true"> </div>
+                </div>
+    
+            </div>
+        </div>
+    
+        <div class="drop_items item3" style="left: -50px;">
+            <div class="empty" id="11">
+            </div>
+    
+            <div class="empty" style="background: rgb(181, 136, 99);" id="12">
+            </div>
+    
+            <div class="empty" id="13">
+            </div>
+    
+            <div class="empty" style="background:rgb(181, 136, 99);" id="14">
+            </div>
+    
+            <div class="empty" id="15">
+            </div>
+    
+            <div class="empty" style="background:rgb(181, 136, 99);" id="16">
+            </div>
+    
+            <div class="empty" id="17">
+            </div>
+    
+            <div class="empty" style="background:rgb(181, 136, 99);" id="18">
+            </div>
+    
+            <div class="empty" style="background:rgb(181, 136, 99);" id="21">
+            </div>
+    
+            <div class="empty" id="22">
+            </div>
+    
+            <div class="empty" style="background:rgb(181, 136, 99);" id="23">
+            </div>
+    
+            <div class="empty" id="24">
+            </div>
+    
+            <div class="empty" style="background:rgb(181, 136, 99);" id="25">
+            </div>
+    
+            <div class="empty" id="26">
+            </div>
+    
+            <div class="empty" style="background:rgb(181, 136, 99);" id="27">
+            </div>
+            
+            <div class="empty" id="28">
+            </div>
+            
+            <div class="empty" id="31">
+            </div>
+    
+            <div class="empty" style="background:rgb(181, 136, 99);" id="32">
+            </div>
+            
+            <div class="empty" id="33">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);" id="34">
+            </div>
+            
+            <div class="empty" id="35">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);" id="36">
+            </div>
+            
+            <div class="empty" id="37">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);" id="38">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);" id="41">
+            </div>
+            
+            <div class="empty" id="42">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);" id="43">
+            </div>
+            
+            <div class="empty" id="44">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);" id="45">
+            </div>
+            
+            <div class="empty" id="46">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);"id="47">
+            </div>
+            
+            <div class="empty"id="48">
+            </div>
+            
+            <div class="empty"id="51">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);" id="52">
+            </div>
+            
+            <div class="empty" id="53">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);" id="54">
+            </div>
+            
+            <div class="empty" id="55">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);" id="56">
+            </div>
+            
+            <div class="empty" id="57">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);" id="58">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);" id="61">
+            </div>
+            
+            <div class="empty" id="62">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);" id="63">
+            </div>
+            
+            <div class="empty" id="64">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);" id="65">
+            </div>
+            
+            <div class="empty" id="66">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);" id="67">
+            </div>
+            
+            <div class="empty" id="68">
+            </div>
+            
+            <div class="empty" id="71">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);" id="72">
+            </div>
+            
+            <div class="empty" id="73">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);" id="74">
+            </div>
+            
+            <div class="empty" id="75">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);" id="76">
+            </div>
+            
+            <div class="empty" id="77">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);" id="78">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);" id="81">
+            </div>
+            
+            <div class="empty" id="82">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);" id="83">
+            </div>
+            
+            <div class="empty" id="84">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);" id="85">
+            </div>
+            
+            <div class="empty" id="86">
+            </div>
+            
+            <div class="empty" style="background:rgb(181, 136, 99);" id="87">
+            </div>
+            
+            <div class="empty" id="88">
+            </div>
+    
+        </div>
+    
+        <div class="item4">
         <div class="drag_items">
             <div class="empty">
-                <div class="fill wrook" draggable="true"> </div>
+                <div class="fill bpawn" draggable="true"> </div>
             </div>
-
+        
             <div class="empty" >
-                <div class="fill wpawn" draggable="true"> </div>
+                <div class="fill brook" draggable="true"> </div>
             </div>
-
+        
             <div class="empty" >
-                <div class="fill wknight" draggable="true"> </div>
+                <div class="fill bpawn" draggable="true"> </div>
             </div>
-
+        
             <div class="empty">
-                <div class="fill wpawn" draggable="true"> </div>
+                <div class="fill bknight" draggable="true"> </div>
             </div>
-
+        
             <div class="empty">
-                <div class="fill wbishop" draggable="true"> </div>
+                <div class="fill bpawn" draggable="true"> </div>
             </div>
-
+        
             <div class="empty">
-                <div class="fill wpawn" draggable="true"> </div>
+                <div class="fill bbishop" draggable="true"> </div>
             </div>
-
+        
             <div class="empty">
-                <div class="fill wking" draggable="true"> </div>
+                <div class="fill bpawn" draggable="true"> </div>
             </div>
-
+        
             <div class="empty">
-                <div class="fill wpawn" draggable="true"> </div>
+                <div class="fill bqueen" draggable="true"> </div>
             </div>
-
+        
             <div class="empty" >
-                <div class="fill wqueen" draggable="true"> </div>
+                <div class="fill bpawn" draggable="true"> </div>
             </div>
-
+        
             <div class="empty" >
-                <div class="fill wpawn" draggable="true"> </div>
+                <div class="fill bking" draggable="true"> </div>
             </div>
-
+        
             <div class="empty" >
-                <div class="fill wbishop" draggable="true"> </div>
+                <div class="fill bpawn" draggable="true"> </div>
             </div>
-
+        
             <div class="empty">
-                <div class="fill wpawn" draggable="true"> </div>
+                <div class="fill bbishop" draggable="true"> </div>
             </div>
-
+        
             <div class="empty" >
-                <div class="fill wknight" draggable="true"> </div>
+                <div class="fill bpawn" draggable="true"> </div>
             </div>
-
+        
             <div class="empty" >
-                <div class="fill wpawn" draggable="true" > </div>
+                <div class="fill bknight" draggable="true"> </div>
             </div>
-
+        
             <div class="empty" >
-                <div class="fill wrook" draggable="true" > </div>
+                <div class="fill bpawn" draggable="true"> </div>
             </div>
             
             <div class="empty" >
-                <div class="fill wpawn" draggable="true"> </div>
+                <div class="fill brook" draggable="true"> </div>
             </div>
+        
+            </div>
+        </div>
+        <div class = "item5">
+            <form id = "confirmation" action = "/confirmation" method = "POST">
+                <input id = "boardoutput" name = "boardoutput" type = "hidden" value = "10"/>
+            </form>
+            <button class="submit" onClick="refreshPage()">Refresh</button>
+            <script>
+            function refreshPage(){
+                window.location.reload();
+            } 
+            </script>
+            <button class="submit" style="vertical-align:middle" onclick="transValue()"><span>Submit Game</span></button>
+        </div>
+    </section>
+  </header>
 
-        </div>
-    </div>
+  <main>
 
-    <div class="drop_items item3" style="left: -50px;">
-        <div class="empty" id="11">
+    <section class="whoAreFF">
+      <!--<div class="whoAreBannerDiv">
+          <img src="../static/images/whoAreCBBanner.jpeg" alt="CB">
+      </div> -->
+      <div class="wrapper">
+        <div>
+          <h2>What are ChessBytes</h2>
         </div>
+        <div class="whoAreContent">
+          <div data-aos="fade-right" class="whoAreText">
+            <!-- add spans and make words POP -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <span>CHESS</span>. ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <span>NFT</span>.</p>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. <span class="spanFood">Chess</span> <span>NFTS</span>.</p>
+          </div>
+          <div data-aos="fade-left" class="whoAreFFImg">
+            <img src="../static/images/goldpiece.jpg" alt="gold king">
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <div class="empty" style="background: rgb(181, 136, 99);" id="12">
+    <section class="saleTimerSection">
+      <!-- <div class="timerSectionTopDiv">
+        <div class="timerSectionCountdownDiv">
+          <section>
+            <div class="countdown">
+              <div class="containerDay">
+                <h3 class="day">Time</h3>
+                <h4>Days</h4>
+              </div>
+              <div class="containerHour">
+                <h3 class="hour">Time</h3>
+                <h4>Hours</h4>
+              </div>
+              <div class="containerMinute">
+                <h3 class="minute">Time</h3>
+                <h4>Minutes</h4>
+              </div>
+              <div class="containerSecond">
+                <h3 class="second">Time</h3>
+                <h4>Seconds</h4>
+              </div>
+            </div>
+          </section>
         </div>
+        <div class="timerTopRightDiv">
+          <section>
+            <h5>presale sold out</h5>
+            <h3>PUBLIC SALE STARTS</h3>
+            <p>10/26/2021</p>
+            <p>1PM EST</p>
+          </section>
+        </div>
+      </div> 
+      <div class="timerSectionBottomDiv" id="timerSectionBottomDiv">
+        <div class="timerBottomLeftDiv">
+          <section>
+            <p>Minting Now Live</p>
+            <p>10000 NFT</p>
+            <p>0.06 ETH</p>
+            <p>MINT COUNT MAX 10 PER TRANSACTION</p>
+          </section>
+        </div>-->
+        <div class="timerConnectWalletDiv">
+          <section>
+            <div class="timerImgDiv">
+              <img src="../static/images/examplegame.gif" alt="a example game">
+            </div>
+            <div class="mintDiv">
+              <div>
+                <button class="connectWalletButton">CONNECT WALLET</button>
+              </div>
+              <div class="mint">
+                <form action="">
+                  <select name="number" id="mintQuantity" class="select">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </form>
+                <button id="mintButton">Mint</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
 
-        <div class="empty" id="13">
+    <section class="aboutSection wrapper" id="about">
+      <h2>ABOUT CHESSBYTES</h2>
+      <h4>WELCOME TO THE CHESS NFT MARKETPLACE AND COMMUNITY</h4>
+      <section>
+        <div class="aboutMainDivs sectionOne">
+          <div data-aos="fade-right" class="aboutMainDivsText">
+            <h4>WHAT IS CHESSBYTES</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <span>CHESS NFT</span> MARKETPLACE WITH MEMBERSHIP AND REWARDS</p>
+            <p><span class="spanNum">100</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+          </div>
+          <div data-aos="fade-left" class="aboutMainDivsImgDiv">
+            <img src="../static/images/examplegame.gif" alt="game">
+          </div>
         </div>
+        <div class="aboutMainDivs sectionTwo">
+          <div data-aos="fade-right" class="aboutMainDivsImgDiv">
+            <img src="../static/images/examplegame.gif" alt="game">
+          </div>
+          <div data-aos="fade-left" class="aboutMainDivsText">
+            <h4>NFT</h4>
+            <p><span class="spanFem">100</span> Boards <span class="spanMan">200</span> Games</p>
+            <p>Ulimited <span class="spanNum">uniqueness</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+          </div>
+        </div>
+        <div class="aboutMainDivs sectionThree">
+          <div data-aos="fade-right" class="aboutMainDivsText">
+            <h4>MINTING</h4>
+            <p>PRICE (to be announced soon)</p>
+            <p>MINT COUNT <span class="spanNum">1</span> PER TRANSACTION</p>
+            <p>IN ORDER TO MINT YOUR GAME, YOU MUST OPEN A WALLET WITH METAMASK.</p>
+            <p>20 COLLECTIONS OF TOP 15 GAMES WILL BE HELD FOR AMBASSADOR PLAYERS/PARTNERSHIPS/PROMO AND GIVEAWAYS/CREATORS AND TEAM DEVELOPERS</p>
+          </div>
+          <div data-aos="fade-left" class="aboutMainDivsImgDiv">
+            <img src="../static/images/examplegame.gif" alt="game head">
+          </div>
+        </div>
+      </section>
+    </section>
 
-        <div class="empty" style="background:rgb(181, 136, 99);" id="14">
+    <section class="foodFeaturesSection" id="foodFeatures">
+      <img class="biteEffect" src="./ffBiteEffect.png" alt="">
+      <img class="biteEffectTwo" src="./ffBiteEffect.png" alt="">
+      <div data-aos="fade-up" class="wrapper">
+        <h2>Special Collections</h2>
+        <h3>Over <span>20</span> special collections for historic games, championships, openings and more in ERC721 token and hosted on IPFS</h3>
+        <h4>Here are only some of them, enjoy the tastes.</h4>
+        <h5>*HOVER OVER <span class="hoverEyes">👀</span>*</h5>
+        <div>
+          <p>
+            <span class="orange">Test</span>, 
+            <span class="spinach">test</span>, 
+            <span class="lime">test</span>, 
+            <span class="kale">test</span>, 
+            <span class="watermelon">test</span>, 
+            <span class="cherry">test</span>, 
+            <span class="mustard">test</span>, 
+            <span class="brocoli">test</span>, 
+            <span class="lemon">test</span>, 
+            <span class="grape">test</span>, 
+            <span class="pomegrante">test</span>, 
+            <span class="beets">test</span>, 
+            <span class="cocktail">test</span>, 
+            <span class="cilantro">test</span>, 
+            <span class="basil">test</span>, 
+            <span class="fungi">test</span>, 
+            <span class="water">test</span>, 
+            <span class="steak">test</span>, 
+            <span class="candy">test</span>, 
+            <span class="kebab">test</span>, 
+            <span class="edamame">test</span>, 
+            <span class="pineapple">test</span>, 
+            <span class="tofu">test</span>, 
+            <span class="butter">test</span>, 
+            <span class="pistachio">test</span>, 
+            <span class="salmon">test</span>, 
+            <span class="beans">test</span>,  
+            <span class="chocolate">test</span>, 
+            <span class="cucumber">test</span>,  
+            <span class="strawberry">test</span>, 
+            <span class="pepper">test</span>, 
+            <span class="raspberry">test</span>, 
+            <span class="redApple">test</span>, 
+            <span class="greenApple">test</span>, 
+            <span class="chiliPepper">test</span>, 
+            <span class="onion">test</span>, 
+            <span class="pear">test</span>, 
+            <span class="papaya">test</span>
+          </p>
         </div>
+      </div>
+    </section>
 
-        <div class="empty" id="15">
+    <section class="roadmapSection wrapper" id="roadmap">
+      <h2>ROADMAP</h2>
+      <div class="roadmapContainer">
+        <div class="roadmap">
+          <ul>
+            <li>
+              <div data-aos="fade-right" class="roadmapContent">
+                <h4>Q1</h4>
+                <p><span>&#x2022;</span> 200 GAMES AND 100 BOARDS TO BE AVAILABLE TO MINT ON ETH BLOCKCHAIN </p>
+                <p><span>&#x2022;</span> COMMUNITY LAUNCH WITH DISCORD, TWITTER, AND TELEGRAM</p>
+                <p><span>&#x2022;</span> PARTNERSHIPS WITH TOP CHESS STREAMERS AND PLAYERS</p>
+                <p><span>&#x2022;</span> HOSTING ON IPFS AND OPENSEA COLLECTION</p>
+                <p><span>&#x2022;</span> ANNOUNCEMENT OF AMBASSADOR COLLECTIONS AND LAUNCH</p>
+              </div>
+            </li>
+            <li>
+              <div data-aos="fade-left" class="roadmapContent">
+                <h4>Q2</h4>
+                <p><span>&#x2022;</span> PUBLIC LAUNCH FOR FREELY ACCESSIBLE GAME MINTING</p>
+                <p><span>&#x2022;</span> CHESSBYTES SPONSORED TOURNAMENTS</p>
+                <p><span>&#x2022;</span> NFT AIRDROPS FOR EARLY CONTRIBUTORS AND USERS</p>
+                <p><span>&#x2022;</span> DAO GOVERNANCE AND COMMUNITY TOKENS</p>
+              </div>
+            </li>
+            <li>
+              <div data-aos="fade-right" class="roadmapContent">
+                <h4>Q3</h4>
+                <p><span>&#x2022;</span> TBDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+                <p><span>&#x2022;</span> TBDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+                <p><span>&#x2022;</span> TBDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+                <p><span>&#x2022;</span> TBDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+                <p><span>&#x2022;</span> TBDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+              </div>
+            </li>
+            <li>
+              <div data-aos="fade-left" class="roadmapContent">
+                <h4>Q4</h4>
+                <p><span>&#x2022;</span> TBDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+                <p><span>&#x2022;</span> TBDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
+                <p><span>&#x2022;</span> TBDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>                
+              </div>
+            </li>
+          </ul>
         </div>
+      </div>
+    </section>
 
-        <div class="empty" style="background:rgb(181, 136, 99);" id="16">
+    <section class="teamSection wrapper" id="team">
+      <h2>TEAM</h2>
+      <section>
+        <div data-aos="fade-down" class="teamContent">
+          <div>
+            <img src="../static/images/goldknight.jpeg" alt="Matt Tengtrakool">
+          </div>
+          <div>
+            <h3>Matt Tengtrakool</h3>
+            <h5>COOL GUY</h5>
+          </div>
         </div>
+        <div data-aos="fade-down" class="teamContent">
+          <div>
+            <img src="../static/images/silverknight.jpeg" alt="HILEAMLAK">
+          </div>
+          <div>
+            <h3>Hileamlak Yitayew</h3>
+            <h5>EVEN COOLER GUY</h5>
+          </div>
+        </div>
+      </section>
+    </section>
 
-        <div class="empty" id="17">
+    <section class="charitySection">
+      <div class="wrapper">
+        <h2>ChessBytes Partners</h2>
+        <p>Check out our growing list of chess partners</p>
+        <img class="biteEffect" src="./ffBiteEffect.png" alt="">
+        <img class="biteEffectTwo" src="./ffBiteEffect.png" alt="">
+        <div>
+          <a aria-label="chess.com website" href="https://www.chess.com/home" target="_blank" rel="noopener">
+            <img class="charityImg" src="../static/images/chess.comlogo.png" alt="chess.com logo">
+          </a>
+          <a aria-label="lichess.org website" href="https://lichess.org/" target="_blank" rel="noopener">
+            <img class="charityImg" src="../static/images/lichess.comlogo.png" alt="chess.com logo">
+          </a>
         </div>
+      </div>
+    </section>
 
-        <div class="empty" style="background:rgb(181, 136, 99);" id="18">
-        </div>
-
-        <div class="empty" style="background:rgb(181, 136, 99);" id="21">
-        </div>
-
-        <div class="empty" id="22">
-        </div>
-
-        <div class="empty" style="background:rgb(181, 136, 99);" id="23">
-        </div>
-
-        <div class="empty" id="24">
-        </div>
-
-        <div class="empty" style="background:rgb(181, 136, 99);" id="25">
-        </div>
-
-        <div class="empty" id="26">
-        </div>
-
-        <div class="empty" style="background:rgb(181, 136, 99);" id="27">
-        </div>
-        
-        <div class="empty" id="28">
-        </div>
-        
-        <div class="empty" id="31">
-        </div>
-
-        <div class="empty" style="background:rgb(181, 136, 99);" id="32">
-        </div>
-        
-        <div class="empty" id="33">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);" id="34">
-        </div>
-        
-        <div class="empty" id="35">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);" id="36">
-        </div>
-        
-        <div class="empty" id="37">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);" id="38">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);" id="41">
-        </div>
-        
-        <div class="empty" id="42">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);" id="43">
-        </div>
-        
-        <div class="empty" id="44">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);" id="45">
-        </div>
-        
-        <div class="empty" id="46">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);"id="47">
-        </div>
-        
-        <div class="empty"id="48">
-        </div>
-        
-        <div class="empty"id="51">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);" id="52">
-        </div>
-        
-        <div class="empty" id="53">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);" id="54">
-        </div>
-        
-        <div class="empty" id="55">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);" id="56">
-        </div>
-        
-        <div class="empty" id="57">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);" id="58">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);" id="61">
-        </div>
-        
-        <div class="empty" id="62">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);" id="63">
-        </div>
-        
-        <div class="empty" id="64">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);" id="65">
-        </div>
-        
-        <div class="empty" id="66">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);" id="67">
-        </div>
-        
-        <div class="empty" id="68">
-        </div>
-        
-        <div class="empty" id="71">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);" id="72">
-        </div>
-        
-        <div class="empty" id="73">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);" id="74">
-        </div>
-        
-        <div class="empty" id="75">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);" id="76">
-        </div>
-        
-        <div class="empty" id="77">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);" id="78">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);" id="81">
-        </div>
-        
-        <div class="empty" id="82">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);" id="83">
-        </div>
-        
-        <div class="empty" id="84">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);" id="85">
-        </div>
-        
-        <div class="empty" id="86">
-        </div>
-        
-        <div class="empty" style="background:rgb(181, 136, 99);" id="87">
-        </div>
-        
-        <div class="empty" id="88">
-        </div>
-
-    </div>
-
-    <div class="item4">
-    <div class="drag_items">
-        <div class="empty">
-            <div class="fill bpawn" draggable="true"> </div>
-        </div>
-    
-        <div class="empty" >
-            <div class="fill brook" draggable="true"> </div>
-        </div>
-    
-        <div class="empty" >
-            <div class="fill bpawn" draggable="true"> </div>
-        </div>
-    
-        <div class="empty">
-            <div class="fill bknight" draggable="true"> </div>
-        </div>
-    
-        <div class="empty">
-            <div class="fill bpawn" draggable="true"> </div>
-        </div>
-    
-        <div class="empty">
-            <div class="fill bbishop" draggable="true"> </div>
-        </div>
-    
-        <div class="empty">
-            <div class="fill bpawn" draggable="true"> </div>
-        </div>
-    
-        <div class="empty">
-            <div class="fill bqueen" draggable="true"> </div>
-        </div>
-    
-        <div class="empty" >
-            <div class="fill bpawn" draggable="true"> </div>
-        </div>
-    
-        <div class="empty" >
-            <div class="fill bking" draggable="true"> </div>
-        </div>
-    
-        <div class="empty" >
-            <div class="fill bpawn" draggable="true"> </div>
-        </div>
-    
-        <div class="empty">
-            <div class="fill bbishop" draggable="true"> </div>
-        </div>
-    
-        <div class="empty" >
-            <div class="fill bpawn" draggable="true"> </div>
-        </div>
-    
-        <div class="empty" >
-            <div class="fill bknight" draggable="true"> </div>
-        </div>
-    
-        <div class="empty" >
-            <div class="fill bpawn" draggable="true"> </div>
-        </div>
-        
-        <div class="empty" >
-            <div class="fill brook" draggable="true"> </div>
-        </div>
-    
-        </div>
-    </div>
-    <div class = "item5">
-        <form id = "confirmation" action = "/confirmation" method = "POST">
-            <input id = "boardoutput" name = "boardoutput" type = "hidden" value = "10"/>
+    <section class="mailingListSection wrapper">
+      <section>
+        <img data-aos="fade-right" src="../static/images/immortalgame.gif" alt="immortal game">
+        <form data-aos="fade-left" action="">
+          <h2>SUBSCRIBE TO STAY INFORMED</h2>
+          <p>ChessBytes drop is coming, subscribe to stay up to date</p>
+          <input aria-label="email" type="email" name="email" placeholder="Email" class="emailInput" required>
+          <input class="submitButton" type="submit" value="Submit">
         </form>
-        <button class="submit" onClick="refreshPage()">Refresh</button>
-        <script>
-        function refreshPage(){
-            window.location.reload();
-        } 
-        </script>
-        <button class="submit" style="vertical-align:middle" onclick="transValue()"><span>Submit Game</span></button>
-    </div>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <section class="wrapper">
+      <div>
+        <a href="terms.html">ChessBytes 2021 Terms & Conditions</a>
+      </div>
+      <div class="socialLinks">
+        <a aria-label="ChessBytes Twitter" href="https://twitter.com/ChessBytes" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+        <a aria-label="ChessBytes Discord" href="https://discord.gg/ChessBytes" target="_blank" rel="noopener"><i class="fab fa-discord"></i></a>
+        <a  aria-label="ChessBytes Instagram" href="https://www.instagram.com/ChessBytes/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+      </div>
+    </section>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ethjs@latest/dist/ethjs.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="static/js/jquery-ui.min.css">
+    <script src="static/js/external/jquery/jquery.js"></script>
+    <script src="static/js/jquery-ui.min.js"></script> 
+    <script src="static/js/main.js" async></script> 
 </body>
 </html>
