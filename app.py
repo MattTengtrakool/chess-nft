@@ -12,10 +12,22 @@ def index():
 def confirmation():
     if request.method == "POST":
         #get outputs
+        print("here")
         output = request.form.get("boardoutput")
-        print(output)
+        tempArray = output.split(',')
+        for x in range(len(tempArray)):
+            if tempArray[x] == "":
+                tempArray[x] = 0
+            tempArray[x] = int(tempArray[x])
+        instructionArray = []
+        for i in range(8):
+            tempRow = []
+            for j in range(8):  
+                tempRow.append(tempArray[j+(8*i)])
+            instructionArray.append(tempRow)
+        print(instructionArray)
         board = generate_board()
-        board = place_icons(board, output)
+        board = place_icons(board, instructionArray)
 
         cv2.imwrite("/static/images/generated_img.png",board)
 
